@@ -21,7 +21,7 @@ app.post("/gemini-text", async (req, res) => {
   const { prompt } = req.body;
 
   const response = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" +
+    "https://generativelanguage.googleapis.com/v1beta/models/gemma-3-27b-it:generateContent?key=" +
       process.env.GEMINI_API_KEY,
     {
       method: "POST",
@@ -43,7 +43,7 @@ app.post("/gemini-image", async (req, res) => {
   console.log("Received prompt:", prompt);
   console.log("Received inlineData:", inlineData );
   const response = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" +
+    "https://generativelanguage.googleapis.com/v1beta/models/gemma-3-27b-it:generateContent?key=" +
       process.env.GEMINI_API_KEY,
     {
       method: "POST",
@@ -73,7 +73,7 @@ app.post("/gemini-file", async (req, res) => {
   const { prompt, imagePart } = req.body;
 
   const response = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" +
+    "https://generativelanguage.googleapis.com/v1beta/models/gemma-3-27b-it:generateContent?key=" +
       process.env.GEMINI_API_KEY,
     {
       method: "POST",
